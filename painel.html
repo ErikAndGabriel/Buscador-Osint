@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel - Sistema de Consultas</title>
+    <link rel="stylesheet" href="css/painel.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <div class="header-content">
+                <h1>Sistema de Consultas</h1>
+                <div class="user-info">
+                    <span id="userName">Usuário</span>
+                    <button id="logoutBtn" class="btn-logout">Sair</button>
+                </div>
+            </div>
+        </header>
+        
+        <div class="main-container">
+            <aside class="sidebar">
+                <nav>
+                    <ul>
+                        <li><a href="#" class="nav-link active" data-target="cep">Consulta CEP</a></li>
+                        <li><a href="#" class="nav-link" data-target="cnpj">Consulta CNPJ</a></li>
+                        <li><a href="#" class="nav-link" data-target="ip">Consulta IP</a></li>
+                        <li><a href="#" class="nav-link" data-target="mac">Consulta MAC</a></li>
+                        <li><a href="#" class="nav-link" data-target="whois">Consulta Whois</a></li>
+                        <li><a href="#" class="nav-link" data-target="ddd">Consulta DDD/DDI</a></li>
+                        <li><a href="#" class="nav-link" data-target="bin">Consulta BIN</a></li>
+                        <li><a href="#" class="nav-link" data-target="usuario">Consulta Usuário</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            
+            <main class="content">
+                <div id="cep" class="tab-content active">
+                    <h2>Consulta de CEP</h2>
+                    <div class="search-form">
+                        <input type="text" id="cepInput" placeholder="Digite o CEP (apenas números)" maxlength="8">
+                        <button id="cepBtn" class="btn-search">Consultar</button>
+                    </div>
+                    <div id="cepResult" class="result"></div>
+                </div>
+                
+                <div id="cnpj" class="tab-content">
+                    <h2>Consulta de CNPJ</h2>
+                    <div class="search-form">
+                        <input type="text" id="cnpjInput" placeholder="Digite o CNPJ (apenas números)" maxlength="14">
+                        <button id="cnpjBtn" class="btn-search">Consultar</button>
+                    </div>
+                    <div id="cnpjResult" class="result"></div>
+                </div>
+                
+                <div id="ip" class="tab-content">
+                    <h2>Consulta de IP</h2>
+                    <div class="search-form">
+                        <input type="text" id="ipInput" placeholder="Digite o IP">
+                        <button id="ipBtn" class="btn-search">Consultar</button>
+                    </div>
+                    <div id="ipResult" class="result"></div>
+                </div>
+                
+                <div id="mac" class="tab-content">
+                    <h2>Consulta de MAC Address</h2>
+                    <div class="search-form">
+                        <input type="text" id="macInput" placeholder="Digite o MAC Address">
+                        <button id="macBtn" class="btn-search">Consultar</button>
+                    </div>
+                    <div id="macResult" class="result"></div>
+                </div>
+                
+                <div id="whois" class="tab-content">
+                    <h2>Consulta de Whois</h2>
+                    <div class="search-form">
+                        <input type="text" id="whoisInput" placeholder="Digite o domínio">
+                        <button id="whoisBtn" class="btn-search">Consultar</button>
+                    </div>
+                    <div id="whoisResult" class="result"></div>
+                </div>
+                
+                <div id="ddd" class="tab-content">
+                    <h2>Consulta de DDD/DDI</h2>
+                    <div class="search-form">
+                        <input type="text" id="dddInput" placeholder="Digite o DDD (2 dígitos)">
+                        <button id="dddBtn" class="btn-search">Consultar</button>
+                    </div>
+                    <div id="dddResult" class="result"></div>
+                </div>
+                
+                <div id="bin" class="tab-content">
+                    <h2>Consulta de BIN</h2>
+                    <div class="search-form">
+                        <input type="text" id="binInput" placeholder="Digite os 6 primeiros dígitos do cartão">
+                        <button id="binBtn" class="btn-search">Consultar</button>
+                    </div>
+                    <div id="binResult" class="result"></div>
+                </div>
+                
+                <div id="usuario" class="tab-content">
+                    <h2>Consulta de Usuário</h2>
+                    <div class="search-form">
+                        <input type="text" id="usuarioInput" placeholder="Digite o nome de usuário">
+                        <button id="usuarioBtn" class="btn-search">Consultar</button>
+                    </div>
+                    <div id="usuarioResult" class="result"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <script src="js/utils.js"></script>
+    <script src="js/consultas.js"></script>
+    <script src="js/painel.js"></script>
+</body>
+</html>
